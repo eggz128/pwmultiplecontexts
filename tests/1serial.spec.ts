@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 //Establish two contexts from one browser, one context for each person
 //Test does something as person 1, then does something as person 2, but each step is performed serially and not in parallel.
 
-test('has title', async ({ browser }) => {
+test('Two users co-ordinating their actions (not parallel)', async ({ browser }) => {
 
   const p1 = await browser.newContext(); //Need seperate contexts per 'person'
   const p2 = await browser.newContext();
